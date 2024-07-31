@@ -80,7 +80,7 @@ body{
 }
 .anonymous button{
   font-weight: 700;
-  background-color: #B3A647;
+  background-color:#B3A647;
   width: 175px;
   height: 30px;
   border: none;
@@ -203,13 +203,13 @@ footer{
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color:#dfe4dc;
+  background-color:#F7FBF4;
   height: 49px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 25px;
-  
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .nav-links{
   color: #65973C;
@@ -247,23 +247,22 @@ footer{
   width: 100%;
   height: 50px;
   background-color:#65973C;
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 20px;
-}
-.forum-titles:hover{
-  text-decoration: underline;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  
 }
 .fitleA{
   text-decoration: none;
   font-weight: 900;
-  color: #F7FBF4;
-  color: black;
+  color:#F7FBF4;
+  font-size: 33px;
 }
 .fitleA h4{
-  color: #F7FBF4;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .community{
   width: 100%;
@@ -281,17 +280,19 @@ footer{
   gap: 10px;
 }
 .com-one{
-     width: 95%;
+     width: 100%;
      height: 70px;
      border-radius: 5px;
      padding: 5px;
      display: flex;
      flex-direction: column;
      gap: 3px;
-     background-color:#dfe4dc;
+     background-color:#65973C;
+     color: #F7FBF4;
 }
 .com-one:hover{
   cursor: pointer;
+  background-color: #dfe4dc;
 }
 .prf {
   display: flex;
@@ -308,11 +309,14 @@ footer{
   gap: 20px;
   font-size: 14px;
 }
+.members h5{
+  color:black;
+}
 .members h6{
-  color: #65973C;
+  color:black;
 }
 .hover-one:hover{
-  background-color: #65973C;
+  background-color:#65973C;
   color: #dfe4dc;
 }
 .hover-two:hover{
@@ -353,11 +357,11 @@ footer{
 }
 .chat-one{
   display: flex;
-  width:80%;
+  width:58%;
   height: 50px;
   margin-left: 10px;
   margin-top: 10px;
-  background-color:#dfe4dc;
+  background-color:#65973C;
   gap: 5px;
   padding: 10px;
   align-items: center;
@@ -378,12 +382,12 @@ footer{
   font-size: 12px;
 }
 .chat-details h6 b{
-  color: #65973C;
+  color:#F7FBF4;
 }
 .support{
   width: 100%;
   height: 550px;
-  background-color:#F7FBF4;
+  background-color:#65973C;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -399,7 +403,7 @@ footer{
 }
 .support-title h5{
   font-size: 20px;
-  color: #65973C;
+  color:#F7FBF4;
 }
 .lastone:hover{
    cursor: pointer;
@@ -436,8 +440,8 @@ footer{
   color:#F7FBF4;
 }
 .green{
-  background-color: #65973C;
-  color: #F7FBF4;
+  background-color:#F7FBF4;
+  color: black;
 }
 .yellow{
   background-color:#B3A647;
@@ -457,6 +461,7 @@ footer{
   margin-left: -150px;
   margin-top:-100px;
   backdrop-filter: blur(5px);
+  z-index: 90;
 }
 
 .top-area{
@@ -579,6 +584,12 @@ footer{
     justify-content: center;
     align-items: center;
   }
+  .user{
+    font-size: 25px;
+  }
+  .profile{
+    font-size: 25px;
+  }
   .continue{
     display: none;
   }
@@ -587,10 +598,12 @@ footer{
   }
   .header{
     background-color:#65973C;
+    z-index: 2;
   }
   .header h1{
     font-family: Roboto, sans-serif;
     color:#F7FBF4;
+    font-size: 20px;
   }
   .header button{
     width: 100px;
@@ -602,14 +615,27 @@ footer{
   }
   .text-area-one{
     display: flex;
-    width: 30%;
+    width: 35%;
     align-items: center;
     gap: 10px;
   }
+  .label-one{
+    margin-left: 40px;
+  }
+  .form-one{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    gap: 10px;
+    background-color: #B3A647;
+  }
   .text-area-two{
     width: 40%;
-   
+    align-items: center;
     display: flex;
+  }
+  .text-area-two label{
+    margin-right: 10px;
   }
   .text-area-two textarea{
     height: 180px;
@@ -640,24 +666,34 @@ footer{
     cursor: pointer;
   }
   .text-area-one textarea{
-     height: 130px;
+     height: 190px;
      background-color: #ffffff;
+     width: 500px;
      padding: 10px;
      border-radius: 20px;
+     display: block;
   }
+ 
   .text-area-main{
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 390px;
     gap: 50px;
+    background-color:#65973C;
+    z-index: 1;
+  }
+  .text-area-main label{
+    color: #F7FBF4;
+    font-weight: 700;
   }
   .mics{
     display: flex;
-    width: 200px;
+    width: 400px;
     gap: 10px;
     align-items: center;
+    color: #F7FBF4;
+    font-weight: 800;
   }
   .microphone{
     color: #F7FBF4;

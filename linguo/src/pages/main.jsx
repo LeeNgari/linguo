@@ -106,12 +106,14 @@ export default function main(){
     return(
         <div className="main">
             <div className="header">
-               <button onClick={() => setFavourite(thumb => !thumb)}><span className="user"><FontAwesomeIcon icon={faStar} /></span></button> 
-                <h1>LINGUO</h1>
-                <button onClick={() => setProfile(thumb => !thumb)}><span className="profile"><FontAwesomeIcon icon={faUser} /></span></button>
+               <button onClick={() => setFavourite(thumb => !thumb)}><span className="user"><FontAwesomeIcon icon={faStar} />SAVED</span></button> 
+               <FontAwesomeIcon icon={faVolumeHigh} />
+                <button onClick={() => setProfile(thumb => !thumb)}><span className="profile"><FontAwesomeIcon icon={faUser} />PROFILE</span></button>
             </div>
             <div className="text-area-main">
+                 <label htmlFor="text-input" className="label-one">ORIGINAL</label>
                 <form className="text-area-one" onSubmit={submitChange} >
+                     
                     <textarea 
                         name="LanguageOne" 
                         id="text-input" 
@@ -123,6 +125,8 @@ export default function main(){
                 </form>
                 
                 <div className="text-area-two">
+                   <label htmlFor="text-input">TRANSLATED</label>
+
                     <textarea 
                         name="LanguageTwo" 
                         id="text-output"
@@ -155,8 +159,8 @@ export default function main(){
                 </select>                   
                 </div>
                 <div className="mics">
-                    <Mic className="microphone mic-one" onClick={startListening} role="button" />
-                    <MicOff className="microphone mic-two" onClick={stopListening} role="button" />   
+                    <Mic className="microphone mic-one" onClick={startListening} role="button" />MIC ON
+                    <MicOff className="microphone mic-two" onClick={stopListening} role="button" /> MIC OFF  
                     <button onClick={voiceText} className="translate-btn">TRANSLATE</button>           
                 </div>
             </div>

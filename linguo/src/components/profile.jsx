@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClockRotateLeft, faDownload, faGear, faDoorOpen, faDoorClosed } from '@fortawesome/free-solid-svg-icons'
+import { faClockRotateLeft, faDownload, faGear, faDoorOpen, faDoorClosed, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import { getAuth, signOut } from "firebase/auth";
 import { NavLink, useNavigate } from 'react-router-dom';
 
@@ -38,7 +38,7 @@ export default function profile({value}){
             <div className="rest">
                 <div className="history flex underline">
                     <FontAwesomeIcon icon={faClockRotateLeft} className="size"/>
-                    <h6>History</h6>
+                    <h6>Change language</h6>
                 </div>
                 <div className="download flex underline">
                     <FontAwesomeIcon icon={faDownload} className="size" />
@@ -46,11 +46,11 @@ export default function profile({value}){
                 </div>
                 <div className="settings flex underline">
                     <FontAwesomeIcon icon={faGear} className="size"/>
-                    <h6>Settings</h6>
+                    <h6>Font Settings</h6>
                 </div>
                 <div className="sign-out flex underline">
-                    <FontAwesomeIcon icon={faDoorClosed} className="size"/>
-                    <button onClick={userSignOut}>Sign out</button>
+                    <FontAwesomeIcon icon={faLightbulb} className="size"/>
+                    <button onClick={userSignOut}>High Contrast mode</button>
                 </div>
             </div>
         </div>

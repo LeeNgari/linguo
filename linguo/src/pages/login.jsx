@@ -38,17 +38,7 @@ export default function LogIn({app, auth}){
       
 
       function anonymous(){
-        console.log("fire")
-                signInAnonymously(auth)
-        .then(() => {
-        
-            console.log("ada")
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ...
-        });
+        navigate("home")
       }
      
       
@@ -70,11 +60,11 @@ export default function LogIn({app, auth}){
                         <label>Password:</label>
                         <input type="password" value={password} onChange={handlePasswordChange} className="password"/>
                     </div>
-                    <button type="submit" className="submit-button"  onClick={onLogin}>Create account</button>
-                    <div className="sign-in"><h6>Already have an account sign in</h6></div>
+                    <button type="submit" className="submit-button"  onClick={onLogin}>Sign In</button>
+                    <div className="sign-in"><h6>Don't have an account? Create on here</h6></div>
                 </div>
                 <div className="google-sign-in"><button>Sign in with Google</button></div>
-                <div className="anonymous"><button className=".submit-button" onClick={anonymous}>Sign in annonymously</button></div>
+                <div className="anonymous"><button className=".submit-button" onClick={anonymous}>Continue without Sign In</button></div>
            </form>
            <div className="continue">
                 <button className="continue-button">Skip this step</button>
